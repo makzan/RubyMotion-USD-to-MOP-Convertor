@@ -47,7 +47,7 @@ class CurrencyViewController < UIViewController
   def convert
     @field.resignFirstResponder
     
-    usd = @field.text.to_i
+    usd = @field.text.to_f
     mop = usd * 7.8
     @resultLabel.text = "USD #{'%.2f' % usd} = MOP #{'%.2f' % mop}"
   end
