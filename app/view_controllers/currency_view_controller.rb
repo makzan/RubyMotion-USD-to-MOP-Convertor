@@ -12,7 +12,7 @@ class CurrencyViewController < UIViewController
     usdLabel.text = 'Fill in USD and convert to MOP'
     usdLabel.textColor = UIColor.whiteColor
     usdLabel.backgroundColor = UIColor.clearColor
-    usdLabel.frame = [[20, 100], [280, 40]] # and don't forget to set the position
+    usdLabel.frame = [[20, 70], [280, 40]] # and don't forget to set the position
     view.addSubview usdLabel
     
     @field = UITextField.new
@@ -20,20 +20,21 @@ class CurrencyViewController < UIViewController
     @field.placeholder = "USD $10,000"
     @field.keyboardType = UIKeyboardTypeNumbersAndPunctuation
     @field.returnKeyType = UIReturnKeyDone
+    @field.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter
     @field.delegate = self
-    @field.frame = [[20, 150], [280, 30]]
+    @field.frame = [[20, 120], [280, 50]]
     view.addSubview @field
     
     button = UIButton.buttonWithType UIButtonTypeRoundedRect
     button.setTitle 'Convert to MOP', forState:UIControlStateNormal
     button.addTarget self, action:'tappedButton', forControlEvents:UIControlEventTouchUpInside
-    button.frame = [[20, 200], [280, 60]]
+    button.frame = [[20, 180], [280, 60]]
     view.addSubview button
     
     @resultLabel = UILabel.new
     @resultLabel.textColor = UIColor.whiteColor
     @resultLabel.backgroundColor = UIColor.clearColor
-    @resultLabel.frame = [[20, 320], [280, 50]]
+    @resultLabel.frame = [[20, 300], [280, 50]]
     view.addSubview @resultLabel
     
     NSLog "Ruby Rocks"
