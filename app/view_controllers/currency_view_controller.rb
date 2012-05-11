@@ -21,6 +21,7 @@ class CurrencyViewController < UIViewController
     @field.keyboardType = UIKeyboardTypeNumbersAndPunctuation
     @field.returnKeyType = UIReturnKeyDone
     @field.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter
+    @field.clearButtonMode = UITextFieldViewModeAlways # always showing the clear button if there is content in text field.
     @field.delegate = self
     @field.frame = [[20, 120], [280, 50]]
     view.addSubview @field
