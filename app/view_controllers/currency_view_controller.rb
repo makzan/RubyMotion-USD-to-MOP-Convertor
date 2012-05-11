@@ -37,6 +37,10 @@ class CurrencyViewController < UIViewController
     @resultLabel.frame = [[20, 300], [280, 50]]
     view.addSubview @resultLabel
     
+    # we have only one purpose in this app, that's the inputting a number in textfield.
+    # so let's focus it.
+    @field.becomeFirstResponder
+    
     NSLog "Ruby Rocks"
   end
   
